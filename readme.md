@@ -20,7 +20,7 @@ log.info("oh look, a log message", {
 });
 ```
 
-Trace is a useful function for functional programming patterns involving composition. It takes a string (and optionally a logging level, defaults to 'info') as a parameter and returns a function that logs whatever value is passed to it before returning that value.
+Trace is a useful function for functional programming patterns involving composition. It takes a string (and optionally a logging level, defaults to 'verbose') as a parameter and returns a function that logs whatever value is passed to it before returning that value.
 
 ```js
 const getLogger = require("drop-in-winston");
