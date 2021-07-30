@@ -56,9 +56,9 @@ const createLogger = (
     );
 
   const trace =
-    (string, method = "verbose") =>
+    (string, logLevel = "verbose") =>
     (value) => {
-      log[method]("TRACE: " + string, { value });
+      log[logLevel]("TRACE: " + string, { value });
       return value;
     };
 
