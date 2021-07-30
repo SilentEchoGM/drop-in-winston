@@ -42,17 +42,18 @@ const createLogger = (
     })
   );
 
-  log.add(
-    new winston.transports.File({
-      format: winston.format.combine(
-        winston.format.timestamp(),
-        winston.format.json()
-      ),
-      filename: opts.verbose,
-      maxsize: 1024 * 1024,
-      level: "verbose",
-    })
-  );
+  if (opts.verbose)
+    log.add(
+      new winston.transports.File({
+        format: winston.format.combine(
+          winston.format.timestamp(),
+          winston.format.json()
+        ),
+        filename: opts.verbose,
+        maxsize: 1024 * 1024,
+        level: "verbose",
+      })
+    );
 
   const trace =
     (string, method = "verbose") =>
