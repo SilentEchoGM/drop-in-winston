@@ -2,7 +2,7 @@
 
 This package exists purely so I don't have to constantly add the exact same patterns for my projects.
 
-Syntax to initialize Winston essentially comes out to requiring the package and then calling it with an object of metadata that includes a key named "src" and optionally paths for logging files. I use src as the file path the function is in but it can be anything at all and you can add as many keys as you like to that object. By default errors go to log/error.log and everything (including errors but excepting verbose) goes to log/combined.log by default.
+Syntax to initialize Winston essentially comes out to requiring the package and then calling it with an options object that includes a defaultMeta object that includes a key named "src". The options object can optionally include paths for logging files. I use src as the file path the function is in but it can be anything at all and you can add as many keys as you like to that object. By default errors go to log/error.log and everything (including errors but excepting verbose) goes to log/combined.log by default.
 
 ```js
 const { getLogger } = require("drop-in-winston");
