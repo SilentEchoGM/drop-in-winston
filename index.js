@@ -1,4 +1,4 @@
-import * as winston from "winston";
+const winston = require("winston");
 
 const createLogger = (
   /** @type {{defaultMeta: {src: string, [metaKey: string]: string | number}, [error: string], [combined: string], [verbose: string]}}*/ opts
@@ -64,4 +64,4 @@ const createLogger = (
   return { log, trace };
 };
 
-export default createLogger;
+module.exports = createLogger;
